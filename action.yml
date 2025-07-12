@@ -17,9 +17,9 @@ inputs:
     required: false
     default: 'true'
   github_token:
-    description: 'GitHub Access Token (usually secrets.GITHUB_TOKEN)'
-    required: true
-    default: ''
+    description: "Authorized secret GitHub Personal Access Token. Defaults to github.token"
+    required: false
+    default: ${{ github.token }}
 runs:
   using: 'node20'
   main: 'dist/index.js'
