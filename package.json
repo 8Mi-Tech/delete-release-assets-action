@@ -15,7 +15,8 @@
   "homepage": "https://github.com/andreaswilli/delete-release-assets-action#readme",
   "scripts": {
     "build-depend":"npm i -g @vercel/ncc npm-check-updates",
-    "build": "ncc build src/index.js --license licenses.txt"
+    "build": "ncc build src/index.js --license licenses.txt",
+    "all": "npm run build-depend && npm run build"
   },
   "dependencies": {
     "@actions/core": "^2.0.3",
