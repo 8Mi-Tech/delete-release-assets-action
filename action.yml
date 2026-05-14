@@ -20,6 +20,10 @@ inputs:
     description: "Authorized secret GitHub Personal Access Token. Defaults to github.token"
     required: false
     default: ${{ github.token }}
+  deleteType:
+    description: "only input release or asset"
+    required: false
+    default: "asset"
 runs:
   using: 'node24'
   main: 'dist/index.js'
