@@ -36325,7 +36325,7 @@ async function deleteAssetWithRetry(octokit, { owner, repo, asset }, limiter) {
     if (error.status === 429) {
       const retryAfter = error.response?.headers?.['retry-after']
         ? parseInt(error.response.headers['retry-after'], 10) * 1000
-        : 60_000;   // 默认 60 秒
+        : 5_000;   // 默认 5 秒
 
       core.warning(`Rate limited (429). Waiting ${retryAfter / 1000}s before retrying ${asset.name}`);
       await delay(retryAfter);
